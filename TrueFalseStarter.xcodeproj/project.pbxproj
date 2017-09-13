@@ -10,8 +10,8 @@
 		843A3F161F678B7600A606FF /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 843A3F151F678B7600A606FF /* AVFoundation.framework */; };
 		84591DA71F62FF650073D5BA /* QuestionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84591DA61F62FF650073D5BA /* QuestionProvider.swift */; };
 		84591DB91F6355150073D5BA /* Fourteen_heads_showing_different_types_of_wigs._Coloured_etc_Wellcome_V0019819.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84591DB81F6355150073D5BA /* Fourteen_heads_showing_different_types_of_wigs._Coloured_etc_Wellcome_V0019819.jpg */; };
-		848D78AC1F6835BA004C020E /* correctAnswerSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 848D78AB1F6835BA004C020E /* correctAnswerSound.mp3 */; };
-		848D78AE1F683A06004C020E /* wrongAnswerSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 848D78AD1F683A06004C020E /* wrongAnswerSound.mp3 */; };
+		848D78B11F695534004C020E /* correctAnswerSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 848D78AF1F695534004C020E /* correctAnswerSound.mp3 */; };
+		848D78B21F695534004C020E /* wrongAnswerSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 848D78B01F695534004C020E /* wrongAnswerSound.mp3 */; };
 		84B584E11F62DE420012325C /* printNHEC-Header.png in Resources */ = {isa = PBXBuildFile; fileRef = 84B584E01F62DE420012325C /* printNHEC-Header.png */; };
 		97093D3C1C913506001275BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97093D3B1C913506001275BC /* AppDelegate.swift */; };
 		97093D3E1C913506001275BC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97093D3D1C913506001275BC /* ViewController.swift */; };
@@ -25,8 +25,8 @@
 		843A3F151F678B7600A606FF /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		84591DA61F62FF650073D5BA /* QuestionProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuestionProvider.swift; path = ../QuestionProvider.swift; sourceTree = "<group>"; };
 		84591DB81F6355150073D5BA /* Fourteen_heads_showing_different_types_of_wigs._Coloured_etc_Wellcome_V0019819.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Fourteen_heads_showing_different_types_of_wigs._Coloured_etc_Wellcome_V0019819.jpg; sourceTree = "<group>"; };
-		848D78AB1F6835BA004C020E /* correctAnswerSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = correctAnswerSound.mp3; path = ../../../Sounds/correctAnswerSound.mp3; sourceTree = "<group>"; };
-		848D78AD1F683A06004C020E /* wrongAnswerSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = wrongAnswerSound.mp3; path = ../../../Sounds/wrongAnswerSound.mp3; sourceTree = "<group>"; };
+		848D78AF1F695534004C020E /* correctAnswerSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = correctAnswerSound.mp3; path = ../Sounds/correctAnswerSound.mp3; sourceTree = "<group>"; };
+		848D78B01F695534004C020E /* wrongAnswerSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = wrongAnswerSound.mp3; path = ../Sounds/wrongAnswerSound.mp3; sourceTree = "<group>"; };
 		84B584E01F62DE420012325C /* printNHEC-Header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "printNHEC-Header.png"; sourceTree = "<group>"; };
 		97093D381C913506001275BC /* TrueFalseStarter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrueFalseStarter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97093D3B1C913506001275BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -85,8 +85,8 @@
 				97093D421C913506001275BC /* Assets.xcassets */,
 				97093D441C913506001275BC /* LaunchScreen.storyboard */,
 				97093D471C913506001275BC /* Info.plist */,
-				848D78AB1F6835BA004C020E /* correctAnswerSound.mp3 */,
-				848D78AD1F683A06004C020E /* wrongAnswerSound.mp3 */,
+				848D78AF1F695534004C020E /* correctAnswerSound.mp3 */,
+				848D78B01F695534004C020E /* wrongAnswerSound.mp3 */,
 				97093D521C932116001275BC /* GameSound.wav */,
 				84B584E01F62DE420012325C /* printNHEC-Header.png */,
 				84591DB81F6355150073D5BA /* Fourteen_heads_showing_different_types_of_wigs._Coloured_etc_Wellcome_V0019819.jpg */,
@@ -155,12 +155,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				848D78B21F695534004C020E /* wrongAnswerSound.mp3 in Resources */,
 				97093D531C932116001275BC /* GameSound.wav in Resources */,
 				97093D461C913506001275BC /* LaunchScreen.storyboard in Resources */,
-				848D78AC1F6835BA004C020E /* correctAnswerSound.mp3 in Resources */,
 				97093D431C913506001275BC /* Assets.xcassets in Resources */,
 				84B584E11F62DE420012325C /* printNHEC-Header.png in Resources */,
-				848D78AE1F683A06004C020E /* wrongAnswerSound.mp3 in Resources */,
+				848D78B11F695534004C020E /* correctAnswerSound.mp3 in Resources */,
 				84591DB91F6355150073D5BA /* Fourteen_heads_showing_different_types_of_wigs._Coloured_etc_Wellcome_V0019819.jpg in Resources */,
 				97093D411C913506001275BC /* Main.storyboard in Resources */,
 			);

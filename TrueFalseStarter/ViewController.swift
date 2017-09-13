@@ -73,6 +73,8 @@ class ViewController: UIViewController {
         timerLabel.text = "Seconds Remaining: \(seconds)"
     
         if seconds == 0 {
+            loadWrongAnswerSound()
+            playWrongAnswerSound()
             lightningTimer.invalidate()
             questionsAsked += 1
             questionField.text = "Sorry, out of time!"

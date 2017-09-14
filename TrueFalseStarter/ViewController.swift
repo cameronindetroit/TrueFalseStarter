@@ -2,8 +2,7 @@
 //  ViewController.swift
 //  TrueFalseStarter
 //
-//  Created by Pasan Premaratne on 3/9/16.
-//  Enhanced by Cameron Barnes 9/12/17.
+//  Created by Cameron Barnes on 9/12/17.
 //  Copyright © 2016 Treehouse. All rights reserved.
 //
 
@@ -130,13 +129,13 @@ class ViewController: UIViewController {
     func newQuestion() {
         
         // Generate new question from Question Provider Model
-        indexOfSelectedQuestion = GKRandomSource.sharedRandom().nextInt(upperBound: questions.count)
+        indexOfSelectedQuestion = GKRandomSource.sharedRandom().nextInt(upperBound: quizQestions.count)
         
         
         
         //Loop to check for repeated questions
         while previousQuestionsArray.contains(indexOfSelectedQuestion) {
-            indexOfSelectedQuestion = GKRandomSource.sharedRandom().nextInt(upperBound: questions.count)
+            indexOfSelectedQuestion = GKRandomSource.sharedRandom().nextInt(upperBound: quizQestions.count)
         }
         
         // Add new question to previous question array
@@ -145,12 +144,12 @@ class ViewController: UIViewController {
         
         
         // Set new answer button titles based on new question
-        let quizQuestions = questions[indexOfSelectedQuestion]
-        questionField.text = quizQuestions["Question"]
-        firstAnswerButton.setTitle(quizQuestions["Answer1"], for: UIControlState.normal)
-        secondAnswerButton.setTitle(quizQuestions["Answer2"], for: UIControlState.normal)
-        thirdAnswerButton.setTitle(quizQuestions["Answer3"], for: UIControlState.normal)
-        fourthAnswerButton.setTitle(quizQuestions["Answer4"], for: UIControlState.normal)
+        let quizQuestions = quizQestions[indexOfSelectedQuestion]
+        questionField.text = quizQuestions.question
+        firstAnswerButton.setTitle(quizQuestions.answer1, for: UIControlState.normal)
+        secondAnswerButton.setTitle(quizQuestions.answer2, for: UIControlState.normal)
+        thirdAnswerButton.setTitle(quizQuestions.answer3, for: UIControlState.normal)
+        fourthAnswerButton.setTitle(quizQuestions.answer4, for: UIControlState.normal)
         playAgainButton.isHidden = true
         
         
@@ -170,11 +169,11 @@ class ViewController: UIViewController {
         questionsAsked += 1
         
         // Set values for both question and the correct answer
-        let selectedQuestion = questions[indexOfSelectedQuestion]
-        let correctAnswer = selectedQuestion["CorrectAnswer"]
+        let selectedQuestion = quizQestions[indexOfSelectedQuestion]
+        let correctAnswer = selectedQuestion.correctAnswer
         
         // Question and Answer Comparison checker
-        if (sender === firstAnswerButton && selectedQuestion["Answer1"] == correctAnswer) || (sender === secondAnswerButton && selectedQuestion["Answer2"] == correctAnswer) || (sender === thirdAnswerButton && selectedQuestion["Answer3"] == correctAnswer) || (sender === fourthAnswerButton && selectedQuestion["Answer4"] == correctAnswer) {
+        if (sender === firstAnswerButton && selectedQuestion.answer1 == correctAnswer) || (sender === secondAnswerButton && selectedQuestion.answer2 == correctAnswer) || (sender === thirdAnswerButton && selectedQuestion.answer3 == correctAnswer) || (sender === fourthAnswerButton && selectedQuestion.answer4 == correctAnswer) {
             
             //Play correct answer audio
             loadCorrectAnswerSound()
@@ -197,7 +196,7 @@ class ViewController: UIViewController {
             playWrongAnswerSound()
             
             // set text field to 'Wrong'
-            questionField.text = "\("Sorry, the correct answer is ")\(" ")\(correctAnswer!)"
+            questionField.text = "\("Sorry, the correct answer is ")\(" ")\(correctAnswer)"
             
             //Stop Timer
             lightningTimer.invalidate()
